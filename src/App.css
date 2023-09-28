@@ -1,5 +1,3 @@
-
-
 .App {
   text-align: center;
   height: 100%;
@@ -13,14 +11,15 @@
 }
 
 header {
-  background-color: rgba(0, 0, 255, 0.235);
+  background-color:rgba(0, 0, 255, 0.064);
   color: black;
-  height: 45px;
+  height: 50px;
   display: block;
   align-items: center;
   padding: 0 35px;
   font-size: 5vh;
 }
+
 .contactCard{
   display: flex;
   flex-direction: column;
@@ -29,17 +28,27 @@ header {
   border-radius: 30px;
   justify-content: space-around;
   margin-bottom: 10px;
-  margin-top: 50px;
+  margin-top: 20px;
+  text-align: start;
+  padding-left: 40px;
+  background-color: rgba(239, 239, 239, 0.397);
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.03);
 }
+
 
 .mainButton{
   background-color: pink;
   border-radius: 20px;
+  border-style: none;
   width: 150px ;
   padding: 10px;
   margin-top: 10px;
   font-weight: bolder;
   box-shadow: #282c34;
+}
+.mainButton:hover{
+  background-color: rgb(244, 203, 210);
+  color: black;
 }
 
 .bold{
@@ -53,10 +62,10 @@ header {
 .list {
   display: flex;
   justify-content: space-around;
-  align-items: center;
   flex-wrap: wrap;
   width: 100%;
 }
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

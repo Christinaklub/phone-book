@@ -1,5 +1,4 @@
 import { useState } from "react";
-import {contactProps} from "../component/contactItems";
 import { ContactForm } from "../entitise/contactFrom";
 import ReactModal from "react-modal";
 import  Button  from "../component/Button";
@@ -17,13 +16,13 @@ const [stilling, setStilling] = useState("")
 
 
 const contactDummyData = [
-  new ContactForm('Christina', 'Klub', 'dfghj@gmail.com', 34463323, 'Student'),
+  new ContactForm('Christina', 'Klubnes', 'Christina@hotmail.com', 34463323, 'Millonær', 'OnlyFans'),
   ];
 
   const [contact, setContact] = useState(contactDummyData);
 
     const handleContactClick = () => {
-     const newContact = new ContactForm(name, lastname, number, mail, firma, stilling)
+     const newContact = new ContactForm(name, lastname, mail, number, firma, stilling)
       setContact([...contact, newContact])
       handleCloseModal()
       setName('');
@@ -74,18 +73,18 @@ const contactDummyData = [
         <ReactModal isOpen={isOpen}>
           <div className="container">
             <p>Firstname</p>
-            <input name="Firstname" placeholder="Name" value={name} onChange={handleNameChange} />
+            <input name="Firstname" placeholder="Your name" value={name} onChange={handleNameChange} />
             <p>Lastname</p>
-            <input name="Lastname" value={lastname} onChange={handleLastnameChange}/>
+            <input name="Lastname" placeholder="Your lastname" value={lastname} onChange={handleLastnameChange}/>
             <p>Phone Number</p>
-            <input type="number" value={number} onChange={handleNumberChange}/>
+            <input type="number" placeholder="12345678" value={number} onChange={handleNumberChange}/>
             <p>Mail</p>
-            <input name="Mail" value={mail} onChange={handleMailChange} />
+            <input name="Mail" placeholder="Your@email.com" value={mail} onChange={handleMailChange} />
             <p>Firma</p>
-            <input name="Frima" value={firma} onChange={handleFirmaChange} />
+            <input name="Frima" placeholder="Firma" value={firma} onChange={handleFirmaChange} />
             <p>Stilling</p>
-            <input name="Stilling" value={stilling} onChange={handleStillingChange} />
-            <div>
+            <input name="Stilling" placeholder="Stilling" value={stilling} onChange={handleStillingChange} />
+            <div className="modalButtons">
             <Button buttonText={"Create Contact"} onClick={handleContactClick} ></Button>
             <Button buttonText={"Cancel"} onClick={handleCloseModal}/>
             </div>

@@ -7,7 +7,7 @@ function App() {
 
     return (
       <div className="App">
-        <Header title="Kontakt" />
+        <Header title="Contact Modal" />
         <MainContent />
       </div>
     );
