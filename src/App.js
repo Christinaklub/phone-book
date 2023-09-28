@@ -7,7 +7,7 @@ function App() {
 
     return (
       <div className="App">
-        <Header title="Kontakt form" />
+        <Header title="Kontakt" />
         <MainContent />
       </div>
     );
