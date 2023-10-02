@@ -70,7 +70,7 @@ const contactDummyData = [
       <main>
         <Button buttonText={"Create Contact"} onClick={handleOpenModal}></Button>
         <div className="list">
-        <ReactModal isOpen={isOpen}>
+        <ReactModal classname="modal" isOpen={isOpen}>
           <div className="container">
             <p>Firstname</p>
             <input name="Firstname" placeholder="Your name" value={name} onChange={handleNameChange} />

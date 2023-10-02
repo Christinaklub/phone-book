@@ -11,7 +11,6 @@
 }
 
 header {
-  background-color:rgba(0, 0, 255, 0.064);
   color: black;
   height: 50px;
   display: block;
@@ -45,6 +44,7 @@ header {
   margin-top: 10px;
   font-weight: bolder;
   box-shadow: #282c34;
+  gap: 10px;
 }
 .mainButton:hover{
   background-color: rgb(244, 203, 210);
