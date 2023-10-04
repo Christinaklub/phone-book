@@ -1,6 +1,7 @@
 import React from 'react'
 
 export default function ContactItem({contactItem}) {
+    // Dette er contentcard hvor den blir sendt ud til siden vores, funksjonen som heter contactitem kaller på firstnam osv.
   return (
     <div className='contactCard'>
     <p> <span className='bold'> Firstname:</span> {contactItem.firstname}</p>

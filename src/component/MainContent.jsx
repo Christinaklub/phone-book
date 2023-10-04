@@ -6,6 +6,7 @@ import ContactItem from "./ContactItem";
 
 export default function MainContent() {
 
+//lager use state for at verdiene i input skal lagre seg etter hva man skriver ind og det gjør vi med alle input
 const [name, setName] = useState("")
 const [lastname, setLastname] = useState("")
 const [number, setNumber] = useState("")
@@ -14,13 +15,13 @@ const [firma, setFirma] = useState("")
 const [stilling, setStilling] = useState("")
 
 
-
+// new ContactForm er et eksempel på en kontakt form 
 const contactDummyData = [
   new ContactForm('Christina', 'Klubnes', 'Christina@hotmail.com', 34463323, 'Millonær', 'OnlyFans'),
   ];
 
   const [contact, setContact] = useState(contactDummyData);
-
+  //Når man trykker på contact click vil den slette innholdet i inputten
     const handleContactClick = () => {
      const newContact = new ContactForm(name, lastname, mail, number, firma, stilling)
       setContact([...contact, newContact])
@@ -34,7 +35,7 @@ const contactDummyData = [
       setIsOpen(false)
     }
 
-
+    // her vil den target det som står i inputten og skrive ud 
     const handleNameChange = (e) => {
       setName(e.target.value)
     }
@@ -54,7 +55,7 @@ const contactDummyData = [
       setStilling(e.target.value)
     }
 
-
+// modalen som åpner og lukker ved usestate
     const [isOpen, setIsOpen] = useState(false);
 
     function handleOpenModal (){
@@ -65,12 +66,12 @@ const contactDummyData = [
       setIsOpen(false)
     }
 
-    
+  
     return (
       <main>
         <Button buttonText={"Create Contact"} onClick={handleOpenModal}></Button>
         <div className="list">
-        <ReactModal classname="modal" isOpen={isOpen}>
+        <ReactModal className="modal" isOpen={isOpen}>
           <div className="container">
             <p>Firstname</p>
             <input name="Firstname" placeholder="Your name" value={name} onChange={handleNameChange} />
@@ -91,7 +92,7 @@ const contactDummyData = [
           </div>
           </ReactModal>
 
-            
+          {/* vi sender ind data fra contact og returner vores content */}
            {contact.map(content =>
             {
               return <ContactItem contactItem={content} /> 

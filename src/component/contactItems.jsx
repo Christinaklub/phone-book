@@ -13,4 +13,4 @@ export default function contactProps(props) {
         </article>
       );
     }
-    
+    // denne her blir ikke brugt 
